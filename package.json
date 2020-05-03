@@ -1,0 +1,20 @@
+{
+  "name": "red",
+  "version": "0.1.0",
+  "description": "Type safe reducers without boilerplate",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betafcc/red.git"
+  },
+  "keywords": [],
+  "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betafcc/red/issues"
+  },
+  "homepage": "https://github.com/betafcc/red#readme"
+}
