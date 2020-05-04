@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "Type safe reducers without boilerplate",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -13,8 +21,29 @@
   "keywords": [],
   "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
   "license": "MIT",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/betafcc/red/issues"
   },
-  "homepage": "https://github.com/betafcc/red#readme"
+  "homepage": "https://github.com/betafcc/red#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "jest": "^26.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.9.2"
+  }
 }
