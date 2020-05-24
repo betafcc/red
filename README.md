@@ -199,6 +199,6 @@ const app = red.withState({
 }).handle({
   // note that you have to manually namespace the state
   setInput: (s, input: string) => ({...s, ui: {input}}),
-  counter: s => ({...s, counter: {count: s.counter.count + 1}})
+  increment: s => ({...s, counter: {count: s.counter.count + 1}})
 })
 ```
