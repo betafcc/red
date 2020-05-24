@@ -1,5 +1,5 @@
 {
-  "name": "red",
+  "name": "@betafcc/red",
   "version": "0.1.0",
   "description": "Type safe reducers without boilerplate",
   "main": "lib/index.js",
@@ -18,7 +18,15 @@
     "type": "git",
     "url": "git+https://github.com/betafcc/red.git"
   },
-  "keywords": [],
+  "keywords": [
+    "reducer",
+    "typescript",
+    "functional-programming",
+    "monoid",
+    "type-safe",
+    "strong-typed",
+    "boilerplate"
+  ],
   "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
   "license": "MIT",
   "jest": {
