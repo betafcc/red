@@ -181,7 +181,7 @@ const app = red
 
 ## Combine
 
-Or you can combine then by namespacing with `red.combine`, similar to redux's `combineReducers`:
+Or you can combine them by namespacing with `red.combine`, similar to redux's `combineReducers`:
 
 ```typescript
 const inputApp = red.withState({input: ''}).handle({setInput: (s, input: string) => ({input})})
