@@ -1,10 +1,12 @@
 import * as rx from 'rxjs'
 import * as op from 'rxjs/operators'
+import * as fs from 'fs'
 import ts from 'typescript'
+import * as prettier from 'prettier'
 
 const createProgram = (source: string) => {
   const program = ts.createProgram([source], {
-    target: ts.ScriptTarget.ES2015,
+    // target: ts.ScriptTarget.ES2015,
     lib: ['dom', 'dom.iterable', 'esnext'],
     allowJs: true,
     skipLibCheck: true,
@@ -36,7 +38,7 @@ const getNodes = (source: ts.SourceFile) =>
   })
 
 export const getTypes = (filename: string) => {
-  const { checker, node$ } = createProgram(__filename)
+  const { checker, node$ } = createProgram(filename)
 
   return node$
     .pipe(
@@ -56,3 +58,25 @@ export const getTypes = (filename: string) => {
     )
     .toPromise()
 }
+
+import('./example')
+  .then(() =>
+    getTypes(__dirname + '/example.tsx').then((t) =>
+      fs.promises.writeFile(
+        __dirname + '/results.tsx',
+        prettier.format(
+          `
+        // Typescript inspect
+        type ActionType<K, P> = {type: K, payload: P}
+        
+        type State = ${t.State}
+        
+type Action = ${t.Action}
+`,
+          { parser: 'babel' }
+        )
+      )
+    )
+  )
+
+  .catch(console.error)

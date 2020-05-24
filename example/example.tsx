@@ -1,8 +1,8 @@
-import { red, StateOf, ActionOf } from '../src/index'
+import { red, StateOf, ActionOf } from '@betafcc/red'
 
-type State = StateOf<typeof app>
+export type State = StateOf<typeof app>
 
-type Action = ActionOf<typeof app>
+export type Action = ActionOf<typeof app>
 
 const app = red
 
