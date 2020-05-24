@@ -1,3 +1,5 @@
+![](example/red-hat.png)
+
 # Red
 
 Type-safe, composable, boilerplateless reducers

@@ -66,12 +66,13 @@ import('./example')
         __dirname + '/results.tsx',
         prettier.format(
           `
-        // Typescript inspect
-        type ActionType<K, P> = {type: K, payload: P}
+// Typescript inspect
         
-        type State = ${t.State}
-        
+type State = ${t.State}
+
 type Action = ${t.Action}
+
+type ActionType<K, P> = {type: K, payload: P}
 `,
           { parser: 'babel' }
         )
