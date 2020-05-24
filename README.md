@@ -123,7 +123,6 @@ const app = red
   })
 ```
 
-
 ## Use it
 
 The simplest way to use is to extract the generated `reducer`, `initial` and the `actions` creators:
