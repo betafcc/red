@@ -1,8 +1,17 @@
+<div align="center">
+
 ![](example/red-hat.png)
+</div>
 
 # Red
 
 Type-safe, composable, boilerplateless reducers
+
+## Install
+
+```
+npm install --save @betafcc/red
+```
 
 ## By example
 
