@@ -7,6 +7,8 @@
 
 Type-safe, composable, boilerplateless reducers
 
+![](example/example.gif)
+
 ## Install
 
 ```
